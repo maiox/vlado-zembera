@@ -1,0 +1,505 @@
+@import 'normalize';
+@import 'mixins';
+@import 'variables'; //FONT WEIGHTS, //FONT COLORS
+@import 'breakPoints'; 
+@import 'section'; // H, P, HR elements 
+@import 'layout';//BODY,
+
+
+//------HEADER-----------------
+
+#header {
+	position: relative;
+	height: 800px; 
+	background: #161415 url('../img/logo2.jpg') no-repeat center fixed;
+	background-size: cover;
+	opacity: 0.7;
+	overflow: hidden;
+		
+		html.x-small & {
+			height: 450px;
+		}
+
+	.introduction {
+		width:400px;
+		margin: 0 auto;
+		position: relative;
+		top: 250px;
+		text-align:center;
+	}
+
+	#icons {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		text-align:center;
+		background: $transparent-black-color;
+		line-height: 40px;
+
+		html.x-small & {
+		display:none;
+		}
+
+			ul {
+				list-style-type:none;
+			}
+
+				li {
+					display: inline-block;
+					margin-right: 30px; 
+				}
+
+					a {
+						color: $white-color;
+						padding:15px;
+						line-height:50px;
+						font-size:25px;
+					}
+		}
+	}
+	
+
+//------------ABOUT SECTION-------
+
+#about {
+	width:100%;
+	height:auto;
+	background: #161415 url('../img/bg3.jpeg')  fixed center center / cover;
+	overflow: hidden;
+
+	.profile_pic {
+		width: 150px;
+		height:auto;
+		border:  3px solid $color9;
+		margin:10px; 
+		@include rounded (50%);
+		background-color: $black-color;
+			&:active,
+			&:focus,
+			&:hover  {
+				border:  3px solid $color5; 
+			}
+		html.x-small & {
+		display:none;
+		}
+	}
+
+.info {
+	position:relative;
+	float:right;
+	width:300px;
+	padding:10px;
+		
+		html.small & {
+			position:absolute;
+			display:inline-block;
+			float:none;
+			top:3px;
+			left: 250px;
+		}
+}
+
+	
+ul {
+	padding: 10px 20px;
+	list-style-type: none;
+	@include line-height (3);
+	background: $transparent-black-color;
+		
+		html.small & {
+		padding: 4px 4px;
+		}
+	}
+}
+		 
+.text {
+	text-align:center;
+	background-color: $transparent-black-color;
+	padding:30px;
+	
+	html.small & {
+	padding: 30px 100px 30px 100px;
+	}
+	
+		.btn {
+			color: $white-color;
+			background: $color4;
+			border: 2px solid $color4; 
+			letter-spacing: 3px;
+			@include rounded;
+		}
+}
+
+
+//---------RESUME---------
+
+#resume {
+	width:100%;
+	padding-bottom: 80px;
+	background: none repeat $color2;
+	overflow: hidden;
+	@include wrap;
+
+		html.small & {
+			padding-bottom: 60px;
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+
+			html.x-small & {
+				padding-bottom: 40px;
+				padding-right: 40px;
+				padding-left: 40px;
+			}
+
+		.col-sm-8 {
+			@include tablet {
+			float:none;
+			margin-bottom:20px;
+		}
+	}
+}
+		
+.resumeList {
+	padding: 50px;
+	background: none repeat $color3;
+	list-style-type:none;
+	margin: 3px;
+}
+						
+.resumeEe {
+	font-size:15px;
+	letter-spacing: 3px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin: 0 auto;
+}
+
+i {
+	margin-top: 0px;
+	margin-bottom: 25px;
+	display: block;
+}
+									 
+.sign {
+	background: none repeat $color4;
+	padding: 5px 5px 0pt;
+	color: $white-color;
+	font-size:25px;
+}
+										
+.country {
+	color: $color4;
+	text-transform: lowercase;
+	font-size:12px;
+}
+
+//-------GENERAL RESUME SETTINGS-----
+
+.resumePeriod {
+	position: relative;
+	background: none repeat $color4;
+	color: $color3;
+	padding: 2px 4px;
+	font-size:10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+//-------STUDIES
+
+.resumeEd {
+	text-align: right;
+	border-right: 1px solid $color4;
+}
+
+.resumeEd .sign {
+	float: right;
+	margin-left: 20px;
+}
+//---------WORK
+
+.resumeEm {
+	text-align: left;
+}	
+
+.resumeEm .sign {
+	float: left;
+	margin-right: 20px;
+}
+
+///------------- PROJECTS------------------
+
+#Portfolio {
+	padding-top: 25px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-color: $color12;
+	color: $white-color;
+	overflow: hidden;
+
+	
+	ul {
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+		li {
+			font-size:10px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			display: inline-block;
+			cursor: pointer;
+			padding: 5px;
+			margin: 0 10px;
+			font-weight: $regular;
+			transition: all .2s ease-out;
+
+				html.x-small & {
+				display:block;
+			}
+		}
+
+			a {
+				color: $white-color;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				padding: 5px;
+				margin-top: 10px;
+				font-size:8px;
+				
+					&:active,
+					&:focus,
+					&:hover  {
+						color: $color4;
+					}
+			}
+}
+		
+				
+			
+
+.gallery {
+	@include wrap;
+	
+	img {
+		opacity:.4;
+		box-shadow: 5px 5px 5px $color6;
+		margin-bottom:10px;
+		margin-top:10px;
+		@include rounded;
+	}
+}
+
+
+.item {
+		position: absolute;
+		color: $white-color;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		margin-top:20px;
+		margin-bottom:20px;
+		opacity:.5;
+			&:active,
+			&:focus,
+			&:hover  {
+				opacity: .9;
+			}
+	}
+
+#First-category {
+	.item {
+		color: $black-color;
+		}
+	}
+
+
+//----------JS LIGHT BOX-------
+
+#overlay {
+	background: $transparent-black-color;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	text-align: center;
+}
+
+	#overlay {
+		img {
+			max-width: 80%;
+			height: auto;
+			margin-top: 20px;
+			border: 5px solid $color2;
+			border-radius: 5px;
+	
+		}
+	}
+
+//--------------END OF LIGHT BOX------
+
+
+//--------------CONTACT----------
+
+#Contact {
+	background:$color3;
+	overflow:hidden;
+
+	.wrap {
+		width:900px;
+	}
+
+	.contactForm{
+		margin: 0 0 50px 0;
+			div {
+				margin: 20px 0;
+			}
+		}
+}
+
+
+fieldset {
+	min-width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	color: $color11;
+
+		html.small &,
+		html.x-small & {
+			text-align:center;
+		}
+
+	input {
+			background: transparent;
+			vertical-align: top;
+			margin: 0;
+			padding: 15px;
+			width: 100%;
+			height: 100%;
+			border: 0;
+			border: 1px solid $default-color;
+			font-weight: $regular;
+			letter-spacing: 2px;
+			font-size:10px;
+
+			html.small &,
+			html.x-small & {
+				width:80%;
+				
+			}
+		}
+		
+		textarea {
+			@extend input;
+		}
+
+		#submit {
+			width: auto;
+			cursor: pointer;
+			position: relative;
+			background: transparent;
+			color: $color3;
+			padding: 16px;
+			background: $color4;
+			margin: 20px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: $regular;
+			letter-spacing: 2px;
+			font-size:12px;
+				
+				html.small &,
+				html.x-small & {
+				margin:0 auto;
+				font-size:10px;
+				}
+		}
+}
+
+.contactBox {
+	html.small &,
+	html.x-small & {
+		text-align:center;
+	}
+
+	.fa {
+		color: $color4;
+		font-size:25px;
+	}
+}  
+
+//----------FOOTER----------
+
+footer {
+	color: $color3;
+	background-color: $color6;
+	padding:30px;
+	overflow:hidden;
+	
+	.footerLeft {
+		font-weight: $regular;
+		color: $default-color;
+		padding-top: 40px;
+		@include font-size (15);
+		
+		html.small &{
+			@include font-size (13);
+		
+		}
+		html.x-small & {
+			@include font-size (13);
+			text-align:center;
+		}
+	}
+
+	.footerRight {
+		text-align: right;
+		font-size:33px;
+			
+			html.small & {
+				font-size:30px;
+			}
+			
+			html.x-small & { 
+				font-size:25px;
+				text-align:center;
+			}
+		}
+		
+		a {
+			color: $default-color;
+			padding: 0 10px;
+			transition: color .3s ease;
+				&:hover,
+				&:active, {
+					color:$white-color;
+				}
+			}
+		
+
+	.fa {
+		display: inline-block;
+		font-weight: $regular;
+		padding-top:15px;
+		
+	}
+}
+
+
+
+
+
+
+           

@@ -1,0 +1,244 @@
+//------SECTION HEADER-------- 
+
+#header {
+	
+	nav { 
+		@include font-size (16);
+			background:$transparent-black-color;
+
+		html.small &,
+		html.x-small & {
+		@include font-size (14);
+		}
+	}
+	
+			
+	h1	{
+		color: $white-color;
+		font-weight:$bold;
+		letter-spacing: 5px;
+		margin-bottom:20px;
+		text-transform: uppercase;
+		@include font-size (40);
+
+		html.medium & {
+		@include font-size (30);
+		}
+		
+		html.small &,
+		html.x-small & {
+		@include font-size (25);
+		}
+}
+	
+	h2	{
+		@extend h1;
+		background: $color4;
+		font-weight:$light;
+		text-transform: uppercase;
+		letter-spacing: 20px;
+		@include font-size (20);
+
+			html.small &,
+			html.x-small &, {
+			@include font-size (15);
+			}
+	}
+}
+
+
+//---------SECTION ABOUT-------- 
+#about {
+
+	h1 {
+		color: $color5;
+		font-weight: $bold;
+		letter-spacing: 3px;
+		margin-bottom: 2px;
+		@include font-size (13);
+				
+		html.small & {
+		@include font-size (11);
+		}
+	}
+
+	span {
+		color:$default-color;
+		@include font-size (11);
+	}
+
+	p {
+		color: $default-color;
+		letter-spacing: 2px;
+		@include font-size (16);
+					
+		html.small & {
+		@include font-size (13);
+		}
+
+		html.x-small &{
+		@include font-size (12);
+		
+		}
+	}
+}
+		
+
+//---------SECTION RESUME----------
+
+ #resume {
+
+	h1 {
+ 		@include h1;
+ 		color:$black-color;
+ 	}
+
+ 	h2 {
+ 		@include h2;
+ 		color:$black-color;
+
+ 	}
+
+	
+	hr {
+		@include hr;
+	}
+		
+	h3 {
+		color:$default-color;
+		font-weight: $regular;
+		line-height: 1.1;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	h4 {
+		color:$default-color;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-top: 30px;
+		margin-bottom: 5px;
+		@include font-size (12);
+
+		html.small & {
+		@include font-size (11);
+		}
+		
+	}
+	
+	p {
+		color: $default-color;
+		letter-spacing: 1px;
+		margin-top: 5px;
+		@include font-size (13);
+
+		html.small & {
+			@include font-size (11);
+		}
+		
+		html.x-small & {
+		@include font-size (11);
+		}
+		
+	}
+}
+
+//----------SECTION RESUME----------
+
+ #Portfolio {
+
+ 	h1 {
+ 		@include h1;
+ 	}
+
+ 	h2 {
+ 		@include h2
+ 	}
+
+	
+	hr {
+		@include hr;
+	}
+
+	h3 {
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		font-weight: $regular;
+		@include font-size (12);
+
+		html.small & {
+		@include font-size (11);
+		}
+
+		html.x-small & {
+		@include font-size (10);
+		}
+		
+	}
+	
+	p {
+		color: $default-color;
+		letter-spacing: 2px;
+		@include line-height (21);
+		@include font-size (12);
+
+		html.small & {
+		@include font-size (10);
+		}
+
+		html.x-small & {
+		@include font-size (9);
+		}
+
+	}
+}
+
+
+
+//-----------SECTION FOOTER-------
+
+#Contact {
+		
+	h1 {
+ 		@include h1;
+ 		color:$color6;
+ 	}
+
+ 	h2 {
+ 		@include h2;
+ 		color:$color6;
+ 	}
+
+	hr {
+		@include hr;
+	}
+
+	h3 { 
+		margin-top: 2px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		font-weight: $bold;
+		letter-spacing: 3px;
+		@include font-size (14);
+
+		html.small &,
+		html.x-small & {
+		@include font-size (12);
+			
+		}
+	}
+
+	p {
+		letter-spacing: 2px;
+		color: $default-color;
+		@include font-size (15);
+		
+		html.small &,
+		html.x-small & {
+		@include font-size (12);
+		}
+	}
+}	
+
+
+ 

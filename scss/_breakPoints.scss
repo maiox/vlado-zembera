@@ -1,0 +1,30 @@
+//--------MIXIN---------------
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+
+//-----INDIVUDAL BREAKING POINTS---------
+
+/*$break-middle: 990px;
+$break-text: 890px; //text about section
+$break-contact: 760px;
+$break-small: 640px;
+$break-Xsmall:495px;*/
+
+
+
+

@@ -1,0 +1,14 @@
+//BODY setting
+body {
+	@include body; 
+	@include clearfix; 
+	@include box-sizing(border-box);
+	@include img;
+	@include font-size(16);
+}
+
+
+
+
+
+
